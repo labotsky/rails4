@@ -27,6 +27,7 @@ gem 'bootstrap-sass',  '3.2.0.0'
 gem 'devise'
 gem 'redis', '~> 3.0.1'
 gem 'hiredis', '~> 0.4.5'
+gem 'foreman'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -38,6 +39,14 @@ gem 'hiredis', '~> 0.4.5'
 # gem 'capistrano-rails', group: :development
 group :test do
   gem 'minitest-reporters'
+end
+
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+  gem 'guard-livereload'
 end
 
 
